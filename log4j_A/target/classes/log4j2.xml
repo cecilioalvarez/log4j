@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+    <Appenders>
+        <Console name="logConsola" target="SYSTEM_OUT">
+        </Console>
+        <File name="logFichero" fileName="miapp.log"></File>
+    </Appenders>
+    <Loggers>
+        <Root level="trace">
+           <AppenderRef ref="logConsola"/>
+        </Root>
+       <Logger name="com" level="error"/>
+        <!--<Logger name="milogger2" level="info" additivity="false">
+          <AppenderRef ref="logFichero"/>
+        </Logger>-->
+    </Loggers>
+</Configuration>

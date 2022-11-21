@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration>
+	<Appenders>
+		<Console name="logConsola" target="SYSTEM_OUT">
+				<PatternLayout pattern="%d{dd-MM-YYYY} %c %p %m%n"></PatternLayout>
+		</Console>
+		<File name="logFichero" fileName="miapp.log"></File>
+	</Appenders>
+	<Loggers>
+		<Root level="trace">
+			<AppenderRef ref="logConsola" />
+		</Root>
+		<Logger name="com.arquitecturajava.log4j.controllers" >
+			<AppenderRef ref="logFichero"  level="error"/>
+		</Logger>
+		<Logger name="com.arquitecturajava.log4j.repositorios" >
+			<AppenderRef ref="logFichero"  level="info"/>
+		</Logger>
+		<Logger name="com.arquitecturajava.log4j.servicios" >
+			<AppenderRef ref="logFichero"  level="warn"/>
+		</Logger>
+	</Loggers>
+</Configuration>
